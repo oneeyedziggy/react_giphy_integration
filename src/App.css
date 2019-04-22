@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+.searchBox {
+    min-width: 50vw
+}
+.searchButton {
+    min-width: 10vw
+}
+.searchBox {
+    font-size: inherit;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.searchButton {
+    font-size: inherit;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.displayImg {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
