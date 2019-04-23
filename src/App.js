@@ -17,8 +17,11 @@ class Search extends Component {
           //not just using offset here b/c if number of results < itemToUse... you get no image back, so use the 
           let count = body.pagination.count,
               itemToUse = Math.round( Math.random() * count );
-          
-          this.props.updateDisplayImageUrl( body.data[ itemToUse ].images.original.url ); //TODO: error handling
+          try {
+            this.props.updateDisplayImageUrl( body.data[ itemToUse ].images.original.url ); 
+          } catch (e ) {
+            this.props.updateDisplayImageUrl( "//www.svgrepo.com/show/48137/sad-hand-drawn-face.svg" ); //TODO: better error handling
+          }
           this.props.updateImageStyle( { display: "inline" } );
         } else {
           throw new Error( "invalid response" );
@@ -107,7 +110,6 @@ class App extends Component {
     } );
   };
   updateImageStyle = ( styleObj ) => {
-    console.log( styleObj );
     this.setState( {
       imageStyle: styleObj
     } );
